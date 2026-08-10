@@ -11,74 +11,90 @@
 
     <body>
 
-        <table class="index-table">
-            <tr>
-                <td>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuZgnKmlSs16898Vpj4i2hPZrWVWR6HTFqj0si5EmTug&s=10" alt="Barangay Pasong Camachile II Logo">
-                </td>
+        <div class="page-header">
+            <div class="header-logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuZgnKmlSs16898Vpj4i2hPZrWVWR6HTFqj0si5EmTug&s=10" alt="City Logo">
+            </div>
 
-                <td>
-                    <h1>Barangay Pasong Camachile II</h1>
-                    <p>General Trias, Cavite 4107, Philippines</p>
-                    <h2>BORROWER SLIP</h2>
-                </td>
+            <div class="header-text">
+                <h1>Barangay Pasong Camachile I</h1>
+                <p>General Trias, Cavite 4107, Philippines</p>
+                <h2>BORROWER SLIP</h2>
+            </div>
 
-                <td>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZuU4BRcMTH_HZ2bykXINJzdM9kAINczMgkMHQpXkjkw&s=10" alt="Barangay SK Logo">
-                </td>
-            </tr>
-        </table>
-
+            <div class="header-logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZuU4BRcMTH_HZ2bykXINJzdM9kAINczMgkMHQpXkjkw&s=10" alt="Barangay SK Logo">
+            </div>
+        </div>
 
         <hr>
        <form method="POST" action="home.html" class="bg-primary-subtle p-4 rounded border">
 
-            <div class="mb-3">
-                <label for="f-name" class="form-label">Name:</label>
-                <input type="text" id="f-name" name="name" class="form-control" required>
-            </div>
+            <fieldset class="mb-3">
+                <legend class="h5">Borrower information</legend>
 
-            <div class="mb-3">
-                <label for="address" class="form-label">Address:</label>
-                <input type="text" id="address" name="address" class="form-control" required>
-            </div>
+                <div class="mb-3">
+                    <label for="f-name" class="form-label">Name: <span aria-hidden="true">*</span></label>
+                    <input type="text" id="f-name" name="name" class="form-control" required aria-required="true">
+                </div>
 
-            <div class="mb-3">
-                <label for="chairs" class="form-label">No. of Chairs:</label>
-                <input type="number" id="chairs" name="chairs" class="form-control" min="0" required>
-            </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address: <span aria-hidden="true">*</span></label>
+                    <input type="text" id="address" name="address" class="form-control" required aria-required="true">
+                </div>
+            </fieldset>
 
-            <div class="mb-3">
-                <label for="tables" class="form-label">No. of Tables:</label>
-                <input type="number" id="tables" name="tables" class="form-control" min="0">
-            </div>
+            <fieldset class="mb-3">
+                <legend class="h5">Items to borrow</legend>
 
-            <div class="mb-3">
-                <label for="tents" class="form-label">No. of Tents:</label>
-                <input type="number" id="tents" name="tents" class="form-control" min="0">
-            </div>
+                <div class="mb-3">
+                    <label for="chairs" class="form-label">No. of Chairs:</label>
+                    <input type="number" id="chairs" name="chairs" class="form-control" min="0" required aria-required="true">
+                </div>
 
-            <div class="mb-3">
-                <label for="dateBorrowed" class="form-label">Date Borrowed:</label>
-                <input type="datetime-local" id="dateBorrowed" name="dateBorrowed" class="form-control" required>
-            </div>
+                <div class="mb-3">
+                    <label for="tables" class="form-label">No. of Tables:</label>
+                    <input type="number" id="tables" name="tables" class="form-control" min="0">
+                </div>
 
-            <div class="mb-3">
-                <label for="dateReturned" class="form-label">Date Returned:</label>
-                <input type="datetime-local" id="dateReturned" name="dateReturned" class="form-control" required>
-            </div>
+                <div class="mb-3">
+                    <label for="tents" class="form-label">No. of Tents:</label>
+                    <input type="number" id="tents" name="tents" class="form-control" min="0">
+                </div>
+            </fieldset>
 
-            <div class="mb-3">
-                <label for="validID" class="form-label">Valid ID Upload With Signature:</label>
-                <input type="file" id="validID" name="file" class="form-control" required>
-            </div>
+            <fieldset class="mb-3">
+                <legend class="h5">Borrowing period</legend>
 
-            <div class="form-check mb-3">
-            <input type="checkbox" id="agree" name="agree" class="form-check-input" checked required>
-            <label for="agree" class="form-check-label">
-                I agree that if anything happens to the borrowed items, it is my responsibility.
-            </label>
-            </div>
+                <div class="mb-3">
+                    <label for="dateBorrowed" class="form-label">Date Borrowed: <span aria-hidden="true">*</span></label>
+                    <input type="datetime-local" id="dateBorrowed" name="dateBorrowed" class="form-control" required aria-required="true">
+                </div>
+
+                <div class="mb-3">
+                    <label for="dateReturned" class="form-label">Date Returned: <span aria-hidden="true">*</span></label>
+                    <input type="datetime-local" id="dateReturned" name="dateReturned" class="form-control" required aria-required="true">
+                </div>
+            </fieldset>
+
+            <fieldset class="mb-3">
+                <legend class="h5">Verification</legend>
+
+                <div class="mb-3">
+                    <label for="validID" class="form-label">Valid ID Upload With Signature: <span aria-hidden="true">*</span></label>
+                    <input type="file" id="validID" name="file" class="form-control" required aria-required="true">
+                    <div class="form-text">Accepted formats: image or PDF.</div>
+                </div>
+
+                <div class="form-check mb-3">
+                <input type="checkbox" id="agree" name="agree" class="form-check-input" required aria-required="true" checked>
+                <label for="agree" class="form-check-label">
+                    I agree that if anything happens to the borrowed items, it is my responsibility.
+                </label>
+                </div>
+            </fieldset>
+
+            <p class="small text-muted">Fields marked with * are required.</p>
 
             <button type="submit" class="btn btn-primary">Submit</button>
             <button type="reset" class="btn btn-danger">Clear</button>
