@@ -2,13 +2,25 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Trebuchet MS", sans-serif;
+}
+
 .page-header {
     max-width: 1100px;
     margin: 25px auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     text-align: center;
+    flex-wrap: wrap;
+}
+
+.header-text h1 {
+    color: rgb(0, 51, 102);
+}
+
+.header-text h2 {
+    color: rgb(0, 51, 102);
 }
 
 .header-logo {
@@ -16,9 +28,8 @@
 }
 
 .header-logo img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
+    width: 150px;
+    height: 150px;
 }
 
 .form-index {
@@ -28,6 +39,18 @@
     border: 1px solid rgba(200, 200, 200, 0.397);
     border-radius: 10px;
     background-color: rgba(0, 119, 255, 0.151);
+    font-weight: bold;
+}
+
+.form-index input {
+    padding: 10px 12px;
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-index span {
+    color: rgb(200, 50, 50);
 }
 
 .form-section {
@@ -35,7 +58,6 @@
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 25px;
-    padding: 20px;
     background-color: rgba(0, 0, 255, 0.1);
 }
 
@@ -52,38 +74,10 @@
     align-items: center;
 }
 
-.form-grid label {
-    font-weight: bold;
-}
-
-.form-grid input {
-    padding: 10px 12px;
-    border: 1px solid rgb(206, 212, 218);
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
 .items-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-}
-
-.item-field {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.item-field label {
-    font-weight: bold;
-}
-
-.item-field input {
-    padding: 10px 12px;
-    border: 1px solid rgb(206, 212, 218);
-    border-radius: 6px;
-    font-size: 1rem;
 }
 
 .date-grid {
@@ -92,55 +86,11 @@
     gap: 20px;
 }
 
-.date-grid label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.date-grid input {
-    padding: 10px 12px;
-    border: 1px solid rgb(206, 212, 218);
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-.verification label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.verification input[type="file"] {
-    padding: 10px;
-    border: 1px solid rgb(206, 212, 218);
-    border-radius: 6px;
-    background-color: white;
-}
-
-.form-text {
-    margin-top: 6px;
-    font-size: 0.875rem;
-    color: rgb(100, 100, 100);
-}
-
 .agreement {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     margin-top: 20px;
-}
-
-.agreement input {
-    margin-top: 4px;
-}
-
-.agreement label {
-    line-height: 1.5;
-}
-
-label span {
-    color: rgb(200, 0, 0);
 }
 
 .required-text {
@@ -157,34 +107,16 @@ label span {
 
 .buttons button {
     padding: 10px 25px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
     cursor: pointer;
+    color: white;
 }
 
 .submit-btn {
     background-color: rgb(0, 51, 102);
-    color: white;
 }
 
 .clear-btn {
     background-color: rgb(200, 50, 50);
-    color: white;
-}
-
-input:focus {
-    outline: none;
-    border-color: rgb(0, 51, 102);
-}
-
-body {
-    font-family: "Trebuchet MS", Helvetica, sans-serif;;
-}
-.home-body {
-    margin-bottom: auto;
-    padding: 20px;
-    background-color: rgb(250, 250, 250);
 }
 
 .message {
@@ -193,8 +125,22 @@ body {
     padding: 25px;
     text-align: center;
     font-size: 1.125rem;
-    line-height: 1.6;
     border: 1px solid rgb(200, 200, 200);
     border-radius: 10px;
-    background-color: rgb(240, 242, 245);
+    background-color: rgb(0, 0, 255, 0.1);
+}
+
+@media (max-width: 700px) {
+
+    .page-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .items-grid,
+    .date-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
