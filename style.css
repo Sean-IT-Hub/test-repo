@@ -84,8 +84,6 @@ body {
 }
 
 .agreement {
-    display: flex;
-    align-items: flex-start;
     gap: 10px;
     margin-top: 20px;
 }
