@@ -4,8 +4,6 @@
     padding: 0;
 }
 body {
-    display: grid;
-    grid-template-rows: auto;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(150, 199, 199);
 }
@@ -32,6 +30,16 @@ form label {
     margin-top: 10px;
     margin-bottom: 5px;
 
+}
+
+.department-select {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.department-select option:first-child {
+    text-align: center;
+    color: gray;
 }
 form input[type ="text"],
 form input[type ="email"],
