@@ -13,7 +13,7 @@ form.addEventListener("submit", function(event) {
 
     if (Number(chairs) === 0 && Number(tables) === 0 && Number(tents) === 0) {
         event.preventDefault();
-        alert("Please select at least one item to borrow.");
+        alert("Please select at least minimum of the Items.");
         return;
     }
 

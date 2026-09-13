@@ -126,11 +126,6 @@ body {
     margin-top: 20px;
 }
 
-.agreement label {
-    flex: 1;
-    min-width: 0;
-}
-
 .required-text {
     font-size: 0.875rem;
     color: rgb(100, 100, 100);
