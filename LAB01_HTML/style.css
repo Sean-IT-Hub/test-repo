@@ -116,9 +116,7 @@ button {
 .cancel-btn:hover {
     background-color: rgb(160, 60, 60);
 }
-
-@media only screen and (max-width: 768px) {
-
+@media (max-width: 768px) {
     body {
         padding: 15px;
     }
@@ -134,8 +132,7 @@ button {
     }
 }
 
-@media only screen and (max-width: 430px) {
-
+@media (max-width: 430px) {
     body {
         padding: 10px;
     }
@@ -160,10 +157,6 @@ button {
     form textarea {
         font-size: 0.95rem;
         padding: 9px;
-    }
-
-    .department-select {
-        width: 200px;
     }
 
     .gender-group {
