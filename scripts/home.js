@@ -1,33 +1,28 @@
- 
+const name = localStorage.getItem("name");
+const address = localStorage.getItem("address");
 
-    const borrowerData = JSON.parse(
-        localStorage.getItem("borrowerData")
-    );
+const chairs = localStorage.getItem("chairs");
+const tables = localStorage.getItem("tables");
+const tents = localStorage.getItem("tents");
 
-    if (borrowerData) {
+const dateBorrowed = localStorage.getItem("dateBorrowed");
+const dateReturned = localStorage.getItem("dateReturned");
 
-        document.getElementById("borrowerName").textContent =
-            borrowerData.name;
+const validID = localStorage.getItem("validID");
 
-        document.getElementById("borrowerAddress").textContent =
-            borrowerData.address;
 
-        document.getElementById("borrowerChairs").textContent =
-            borrowerData.chairs;
+document.getElementById("borrowerName").textContent = name;
 
-        document.getElementById("borrowerTables").textContent =
-            borrowerData.tables || "0";
+document.getElementById("borrowerAddress").textContent = address;
 
-        document.getElementById("borrowerTents").textContent =
-            borrowerData.tents || "0";
+document.getElementById("borrowerChairs").textContent = chairs;
 
-        document.getElementById("dateBorrowed").textContent =
-            borrowerData.dateBorrowed;
+document.getElementById("borrowerTables").textContent = tables || "0";
 
-        document.getElementById("dateReturned").textContent =
-            borrowerData.dateReturned;
+document.getElementById("borrowerTents").textContent = tents || "0";
 
-        document.getElementById("validID").textContent =
-            borrowerData.validIDFileName;
+document.getElementById("dateBorrowed").textContent = dateBorrowed;
 
-    }
+document.getElementById("dateReturned").textContent = dateReturned;
+
+document.getElementById("validID").textContent = validID;

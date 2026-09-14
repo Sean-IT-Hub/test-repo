@@ -15,14 +15,20 @@ form.addEventListener("submit", function (event) {
     const validIDFile = document.getElementById("validID").files[0];
 
     if (!validIDFile) {
+
         event.preventDefault();
+
         alert("Please upload a valid ID with signature.");
+
         return;
     }
 
     if (new Date(dateReturned) <= new Date(dateBorrowed)) {
+
         event.preventDefault();
+
         alert("The return date must be later than the borrowed date.");
+
         return;
     }
 
@@ -30,25 +36,24 @@ form.addEventListener("submit", function (event) {
         "Are you sure you want to submit your borrower slip?"
     );
 
+
     if (!confirmSubmit) {
+
         event.preventDefault();
+
         return;
     }
 
-    const borrowerData = {
-        name: name,
-        address: address,
-        chairs: chairs,
-        tables: tables,
-        tents: tents,
-        dateBorrowed: dateBorrowed,
-        dateReturned: dateReturned,
-        validIDFileName: validIDFile.name
-    };
+    localStorage.setItem("name", name);
+    localStorage.setItem("address", address);
 
-    localStorage.setItem(
-        "borrowerData",
-        JSON.stringify(borrowerData)
-    );
+    localStorage.setItem("chairs", chairs);
+    localStorage.setItem("tables", tables);
+    localStorage.setItem("tents", tents);
+
+    localStorage.setItem("dateBorrowed", dateBorrowed);
+    localStorage.setItem("dateReturned", dateReturned);
+
+    localStorage.setItem("validID", validIDFile.name);
 
 });
