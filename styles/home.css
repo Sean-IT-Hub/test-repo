@@ -1,0 +1,65 @@
+.message {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    text-align: center;
+    font-size: 1.125rem;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 255, 0.1);
+}
+
+.message p {
+    margin-bottom: 10px;
+}
+
+.dashboard {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 255, 0.1);
+}
+
+.dashboard h2 {
+    color: rgb(0, 51, 102);
+    margin-bottom: 20px;
+}
+
+.dashboard-card {
+    padding: 25px;
+    border: 1px solid rgba(200, 200, 200, 0.5);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.dashboard-card p {
+    margin-bottom: 15px;
+}
+
+.dashboard-card strong {
+    color: rgb(0, 51, 102);
+}
+
+.dashboard-card p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+
+    .message {
+        margin: 20px 15px;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .dashboard {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+
+    .dashboard-card {
+        padding: 20px;
+    }
+
+}
