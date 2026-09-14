@@ -10,7 +10,6 @@ const dateReturned = localStorage.getItem("dateReturned");
 
 const validID = localStorage.getItem("validID");
 
-
 document.getElementById("borrowerName").textContent = name;
 
 document.getElementById("borrowerAddress").textContent = address;

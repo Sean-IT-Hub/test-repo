@@ -83,7 +83,7 @@ body {
 }
 
 .form-index span {
-    color: rgb(200, 50, 50);
+    color: rgb(133, 83, 83);
 }
 
 .form-section {
@@ -147,11 +147,11 @@ body {
 }
 
 .submit-btn {
-    background-color: rgb(0, 51, 102);
+    background-color: rgba(0, 51, 102, 0.199);
 }
 
 .clear-btn {
-    background-color: rgb(200, 50, 50);
+    background-color: rgba(212, 210, 210, 0.363);
 }
 
 .message {
