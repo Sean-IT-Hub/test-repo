@@ -165,6 +165,10 @@ body {
     background-color: rgba(0, 0, 255, 0.1);
 }
 
+.message p {
+    margin-bottom: 10px;
+}
+
 @media (max-width: 1024px) {
     .header-logo {
         width: 110px;
