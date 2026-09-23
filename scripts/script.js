@@ -2,6 +2,9 @@ const form = document.querySelector(".form-index");
 
 form.addEventListener("submit", function (event) {
 
+     const allInputs = document.querySelectorAll(".form-index input");
+    console.log(allInputs);
+
     const name = document.getElementById("f-name").value;
     const address = document.getElementById("address").value;
 
